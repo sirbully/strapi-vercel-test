@@ -2,9 +2,9 @@ FROM node:lts-alpine
 
 WORKDIR /usr/app
 
-COPY package.json package-lock.json ./
+COPY package.json yarn.lock ./
 
-RUN npm ci --quiet
+RUN yarn
 
 COPY . .
 
