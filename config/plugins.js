@@ -7,4 +7,14 @@ module.exports = ({ env }) => ({
       api_secret: env("CLOUDINARY_API_SECRET"),
     },
   },
+  graphql: {
+    endpoint: "/graphiql",
+    shadowCRUD: true,
+    playgroundAlways: true,
+    depthLimit: 7,
+    amountLimit: 100,
+    apolloServer: {
+      tracing: false,
+    },
+  },
 });
